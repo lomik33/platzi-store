@@ -1,0 +1,19 @@
+ng generate component xyz
+ng add @angular/material
+
+El data binding es la sincronización entre el modelo y la vista.
+Para hacer uso debemos importar
+import { FormsModule } from ‘@angular/forms’
+
+<input type = "text" [(ngModel)]="usuario
+
+
+En proyectos reales puedes que te encuentres con dos tipos de NgModel
+
+[(ngModel)]=“nombre”
+
+[ngModel]=“apellido”
+
+El primero hace un enlace de doble sentido, es decir, si se actualiza la vista se actualiza el valor y si se actualiza el valor se actualiza la vista.
+
+El segundo hace un enlace de un sólo sentido, este sentido va desde el modelo a la vista, pero la vista NO puede actualizar al modelo.
