@@ -23,6 +23,8 @@
 </div>
 
 
-<div *ngFor="let product of products; index as i">
-  <app-product [product]="product" (addCartClick)="addCartDelegate($event)" ></app-product>
+<div class="product-grid">
+  <app-product  *ngFor="let product of products; index as i" 
+    [product]="product" 
+    (addCartClick)="addCartDelegate($event)" ></app-product>
 </div>
