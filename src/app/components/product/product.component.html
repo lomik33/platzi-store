@@ -1,8 +1,14 @@
 <p>product component!</p>
 
 <h3>
-  {{product.title}}
+  {{product.title | uppercase}}
 </h3>
   <img [src]="product.image" alt="imagen"/>
-  {{product.price}}
+  {{ product.price | currency:'MXN' }}
+  <p>
+    {{product.description | slice:0:10}}
+  </p>
+  <p>
+    {{today | date:'dd/MM/yyyy'}}
+  </p>
 <button (click)="addCart()">Agregar al carrito</button>

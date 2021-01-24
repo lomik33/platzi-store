@@ -1,5 +1,14 @@
+
+<!--Con este tag se puede renderizar componentes-->
+<router-outlet>
+
+</router-outlet>
 <input type="text" [(ngModel)]="title"/>
 {{title}} <!--String interpolation-->
+
+<input type="text" [(ngModel)]="power"/>
+{{power | exponential}} <!--String interpolation-->
+
 <div *ngIf="1 === 1">
   este es un div
 </div>
@@ -23,8 +32,3 @@
 </div>
 
 
-<div class="product-grid">
-  <app-product  *ngFor="let product of products; index as i" 
-    [product]="product" 
-    (addCartClick)="addCartDelegate($event)" ></app-product>
-</div>

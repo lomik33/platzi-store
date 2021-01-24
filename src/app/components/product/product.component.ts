@@ -10,6 +10,8 @@ export class ProductComponent implements OnInit {
   @Input() product: Product;
   constructor() { }
   @Output() addCartClick: EventEmitter<any>= new EventEmitter();
+
+  today = new Date();
   ngOnInit() {
   }
 
