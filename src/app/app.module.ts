@@ -13,6 +13,7 @@ import { DemoComponent } from './components/demo/demo.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HeaderComponent } from './components/header/header.component';
     DemoComponent,
     BannerComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
