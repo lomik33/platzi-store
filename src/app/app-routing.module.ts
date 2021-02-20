@@ -1,40 +1,59 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import {HomeComponent} from './components/home/home.component' 
-import {DemoComponent} from './components/demo/demo.component' 
-import {ProductsComponent} from './components/products/products.component' 
-import { ContactComponent } from './components/contact/contact.component' 
-import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component'
-
-
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
+import { HomeComponent } from "./components/home/home.component";
+import { DemoComponent } from "./components/demo/demo.component";
+import { ProductsComponent } from "./components/products/products.component";
+import { ContactComponent } from "./components/contact/contact.component";
+import { PageNotFoundComponent } from "./components/page-not-found/page-not-found.component";
+import { ProductDetailComponent } from "./components/product-detail/product-detail.component";
+import { LayoutComponent } from "./components/layout/layout.component";
 
 const routes: Routes = [
+  {
+    path: "",
+    component: LayoutComponent,
+
+    children: [
+      { //reglas de redireccion se pasan en el children
+        path: "",
+        pathMatch: "full",
+        redirectTo: "home",
+      },
+
+      {
 
 
-  { path: '', redirectTo: 'home' , pathMatch:'full'},
-  {
-    path: 'home',
-    component: HomeComponent
+        path: "home",
+
+        component: HomeComponent,
+      },
+      {
+        path: "products",
+        component: ProductsComponent,
+      },
+      {
+        path: "products/:id",
+        component: ProductDetailComponent,
+      },
+      {
+        path: "contact",
+        component: ContactComponent,
+      },
+    ],
   },
+
+
   {
-    path: 'products',
-    component: ProductsComponent
+    path: "demo",
+    component: DemoComponent,
   },
-  {
-    path: 'contact',
-    component: ContactComponent
-  },
-  {
-    path: 'demo',
-    component: DemoComponent
-  },
-  
+
   /* Debe estar después para que redireccione a los componentes que no encuentre*/
-  { path: '**', component: PageNotFoundComponent}
+  { path: "**", component: PageNotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

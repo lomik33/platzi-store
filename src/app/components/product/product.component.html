@@ -3,7 +3,7 @@
 <h3>
   {{product.title | uppercase}}
 </h3>
-  <img [src]="product.image" alt="imagen"/>
+   <img [src]="product.image" alt="imagen"/>
   {{ product.price | currency:'MXN' }}
   <p>
     {{product.description | slice:0:10}}
@@ -12,3 +12,4 @@
     {{today | date:'dd/MM/yyyy'}}
   </p>
 <button (click)="addCart()">Agregar al carrito</button>
+<a [routerLink]="['/products',product.id]">Ver  detalle</a>
