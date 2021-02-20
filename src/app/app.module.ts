@@ -6,11 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './components/product/product.component';
 import { ExponentialPipe } from './exponential.pipe';
-import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { DemoComponent } from './components/demo/demo.component';
-import { BannerComponent } from './components/banner/banner.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
@@ -22,11 +20,9 @@ import { LayoutComponent } from './components/layout/layout.component';
     AppComponent,
     ProductComponent,
     ExponentialPipe,
-    HomeComponent,
     ProductsComponent,
     ContactComponent,
     DemoComponent,
-    BannerComponent,
     FooterComponent,
     HeaderComponent,
     PageNotFoundComponent,
