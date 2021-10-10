@@ -14,6 +14,7 @@ import {CoreModule} from './modules/core/core.module'
 import {ProductsModule} from './modules/products/products.module'
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { HighlightDirective } from './directives/highlight/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LayoutComponent } from './components/layout/layout.component';
     ContactComponent,
     DemoComponent,
     PageNotFoundComponent,
-    LayoutComponent
+    LayoutComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

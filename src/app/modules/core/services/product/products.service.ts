@@ -59,7 +59,7 @@ export class ProductsService {
   }
 
   getProduct (id: string){
-    return this.products.find(item=>id=== item.id);
+    return this.products.find(item => id === item.id);
   }
 
   constructor() { }
