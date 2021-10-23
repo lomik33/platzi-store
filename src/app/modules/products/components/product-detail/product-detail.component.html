@@ -1,5 +1,5 @@
 <div>
-<img [src]="product.image" alt=""/>
+  <img [src]="product.image" alt="" />
 </div>
 <div>
   <ul>
@@ -8,13 +8,10 @@
     </li>
 
     <li>
-      Precio: {{product.price | currency}}
+      Precio: {{product.price | currency}} <!--Uso de Pipe-->
     </li>
   </ul>
   <p>
-
-
-      {{product.description}}
-
-  </p>
+    {{product.description}}
+   </p>
 </div>

@@ -7,5 +7,4 @@ import { Product } from './models/product.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  
 }

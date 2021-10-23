@@ -12,15 +12,12 @@ const routes: Routes = [
     component: LayoutComponent,
 
     children: [
-      { //reglas de redireccion se pasan en el children
+      { /*reglas de redireccion se pasan en el children*/
         path: '',
         pathMatch: 'full',
         redirectTo: 'home',
       },
-
       {
-
-
         path: 'home',
         loadChildren: () => import('./components/home/home.module').then( m => m.HomeModule)
       },
@@ -35,20 +32,17 @@ const routes: Routes = [
       },
     ],
   },
-
-
   {
     path: 'demo',
     component: DemoComponent,
   },
-
   /* Debe estar después para que redireccione a los componentes que no encuentre*/
   { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes,{
-    preloadingStrategy:PreloadAllModules //Carga los modulos conforme este desocupado el navegador y no en el primer load
+    preloadingStrategy: PreloadAllModules /*Carga los modulos conforme este desocupado el navegador y no en el primer load*/
   })],
   exports: [RouterModule],
 })
